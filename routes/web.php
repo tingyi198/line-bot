@@ -17,5 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/test', 'LineHookController@test');
 Route::post('/line-hook', 'LineHookController@hooks');
