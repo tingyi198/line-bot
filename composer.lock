@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7759431e303e2d722a264a8a991a9e84",
+    "content-hash": "188dd874b30900a265272c94bdfe50f3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1349,17 +1349,98 @@
             "time": "2021-01-18T20:58:21+00:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "2.3.1",
+            "name": "linecorp/line-bot-sdk",
+            "version": "7.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe"
+                "url": "https://github.com/line/line-bot-sdk-php.git",
+                "reference": "f81d282ccc5d09c7df8232d5465bb29559976933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/9738e495f288eec0b187e310b7cdbbb285777dbe",
-                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe",
+                "url": "https://api.github.com/repos/line/line-bot-sdk-php/zipball/f81d282ccc5d09c7df8232d5465bb29559976933",
+                "reference": "f81d282ccc5d09c7df8232d5465bb29559976933",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-sockets": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "orchestra/testbench": "*",
+                "phpmd/phpmd": "~2.9",
+                "phpunit/phpunit": "^4.8.36||^5||^6||^7",
+                "squizlabs/php_codesniffer": "~3.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LINE\\Laravel\\LINEBotServiceProvider"
+                    ],
+                    "aliases": {
+                        "LINEBot": "LINE\\Laravel\\Facade\\LINEBot"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LINE\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "moznion",
+                    "email": "moznion@gmail.com",
+                    "role": "Retired"
+                },
+                {
+                    "name": "Satoru Yoshihara",
+                    "email": "vaduz0@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Satoshi Shibuya",
+                    "email": "satosby@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Shunsuke Mori",
+                    "email": "morimorim7180@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "SDK of the LINE BOT API for PHP",
+            "homepage": "https://github.com/line/line-bot-sdk-php",
+            "keywords": [
+                "bot",
+                "line",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/line/line-bot-sdk-php/issues",
+                "source": "https://github.com/line/line-bot-sdk-php/tree/7.1.0"
+            },
+            "time": "2021-07-21T04:55:31+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "71312564759a7db5b789296369c1a264efc43aad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/71312564759a7db5b789296369c1a264efc43aad",
+                "reference": "71312564759a7db5b789296369c1a264efc43aad",
                 "shasum": ""
             },
             "require": {
@@ -1430,7 +1511,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.3.1"
+                "source": "https://github.com/Seldaek/monolog/tree/2.3.2"
             },
             "funding": [
                 {
@@ -1442,7 +1523,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-14T11:56:39+00:00"
+            "time": "2021-07-23T07:42:52+00:00"
         },
         {
             "name": "nesbot/carbon",
