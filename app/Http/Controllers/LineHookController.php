@@ -10,6 +10,14 @@ use LINE\LINEBot\Constant\HTTPHeader;
 
 class LineHookController extends Controller
 {
+    public function test() {
+        $ChannelAccessToken = env('LINE_CHANNEL_ACCESS_TOKEN');
+        $ChannelSecret = env('LINE_CHANNEL_SECRET');
+        $httpClient = new CurlHTTPClient($ChannelAccessToken);
+        $bot = new LINEBot($httpClient, ['channelSecret' => $ChannelSecret]);
+        $response = $bot->replyText('<reply token>', 'hello!');
+    }
+
     public function hooks(Request $request)
     {
         $ChannelAccessToken = env('LINE_CHANNEL_ACCESS_TOKEN');
